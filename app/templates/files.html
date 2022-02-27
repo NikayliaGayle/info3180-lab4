@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h1>View Images </h1>
+
+{% include 'flash_messages.html' %}
+<div class="photogrid">
+    {% for file in filenames %}
+        <div class= "photos">
+           <img src="{{file}}">
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
